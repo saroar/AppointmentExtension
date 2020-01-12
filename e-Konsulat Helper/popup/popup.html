@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>e-Konsulat Helper</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        body {
+            min-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="list-group my-2">
+                    <a href="#" class="list-group-item list-group-item-action" id="enableproxy">Enable proxy</a>
+                    <a href="#" class="list-group-item list-group-item-action" id="changeproxy">Change proxy</a>
+                    <a href="#" class="list-group-item list-group-item-action" id="clearproxy">Clear proxy</a>
+                    <a href="#" class="list-group-item list-group-item-action" id="clearcookies">Clear cookies</a>
+                    <a href="#" class="list-group-item list-group-item-action" id="clearservicetype">Clear type of
+                        service</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="user-agent-select">UA</label>
+                    </div>
+                    <select class="custom-select" id="user-agent-select">
+                        <option value="">Default</option>
+                        <option value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36">Windows, Chrome 76</option>
+                        <option value="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0">Windows, Firefox 69</option>
+                        <option value="Mozilla/5.0 (X11; Linux x86_64; rv:69.0) Gecko/20100101 Firefox/69.0">Linux, Firefox 69</option>
+                        <option value="Mozilla/5.0 (Linux; Android 9.0; Z832 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Mobile Safari/537.36">Android Phone, Chrome 76</option>
+                        <option value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Safari/605.1.15">Mac, Safari 12</option>
+                        <option value="Mozilla/5.0 (iPhone; CPU OS 10_14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Mobile/14E304 Safari/605.1.15">iPhone, Safari 12</option>
+                        <option value="Mozilla/5.0 (PlayStation 4 4.71) AppleWebKit/601.2 (KHTML, like Gecko)">PS4</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="captcha-select">Captcha</label>
+                    </div>
+                    <select class="custom-select" id="captcha-select">
+                        <option value="0">Not use...</option>
+                        <option value="1">One</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Delay</span>
+                    </div>
+                    <input type="text" id="delay" class="form-control" placeholder="ms">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="custom-control custom-checkbox mb-2">
+                    <input type="checkbox" class="custom-control-input" id="camouflage">
+                    <label class="custom-control-label" for="camouflage">Сamouflage mode</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

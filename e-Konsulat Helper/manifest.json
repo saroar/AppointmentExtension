@@ -1,0 +1,49 @@
+{
+  "name": "e-Konsulat Helper",
+  "description": "Book a date on e-konsulat",
+  "version": "0.1.100",
+  "permissions": [
+    "proxy",
+    "storage",
+    "tabs",
+    "cookies",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon32.png",
+    "default_title": "e-Konsulat Helper",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+        "*://*.e-konsulat.gov.pl/*",
+        "*://*.google.com/*",
+        "*://*.hcaptcha.com/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "lib/axios.min.js",
+      "background-script.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "resources/*"
+  ],
+  "manifest_version": 2
+}

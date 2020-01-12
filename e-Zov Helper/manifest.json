@@ -1,0 +1,44 @@
+{
+  "name": "e-Zov Helper",
+  "description": "Book a date on e-zov",
+  "version": "0.0.010",
+  "permissions": [
+    "proxy",
+    "tabs",
+    "storage",
+    "cookies",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon32.png",
+    "default_title": "e-Zov Helper",
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+        "*://*.ezov.mzv.sk/*"
+      ],
+      "js": [
+        "content-script.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "lib/axios.min.js",
+      "background-script.js"
+    ]
+  },
+  "manifest_version": 2
+}
